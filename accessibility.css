@@ -1,0 +1,267 @@
+:root {
+  --reading-scale: 1;
+}
+:root[data-text-size='large'] {
+  --reading-scale: 1.2;
+}
+:root[data-text-size='xlarge'] {
+  --reading-scale: 1.45;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 12px;
+  z-index: 99999;
+  padding: 14px 18px;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+.skip-link:focus {
+  top: 12px;
+}
+html[data-theme]
+  :is(button, a, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--ui-text) !important;
+  outline-offset: 3px;
+}
+.card-title-open {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  min-height: 44px;
+  line-height: inherit;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+html[data-text-size]
+  :is(.catalog, .detail-panel, #memberPage, #glossaryPage, .sidebar, dialog) {
+  overflow-wrap: anywhere;
+}
+html:not([data-text-size='normal'])
+  :is(.catalog, .detail-panel, #memberPage, #glossaryPage, .sidebar, dialog)
+  :is(p, li, input, select, textarea, button, summary) {
+  font-size: calc(14px * var(--reading-scale)) !important;
+  line-height: 1.75;
+}
+html:not([data-text-size='normal'])
+  :is(.catalog, .detail-panel, #memberPage, #glossaryPage, dialog)
+  small {
+  font-size: calc(12px * var(--reading-scale)) !important;
+  line-height: 1.7;
+}
+html:not([data-text-size='normal']) .catalog .card-title,
+html:not([data-text-size='normal']) .catalog .card-title-open {
+  font-size: calc(20px * var(--reading-scale)) !important;
+  line-height: 1.5;
+}
+html:not([data-text-size='normal']) #detailTitle {
+  font-size: calc(28px * var(--reading-scale));
+  line-height: 1.5;
+}
+html:not([data-text-size='normal']) .hero {
+  height: auto !important;
+  min-height: calc(100svh - var(--header-height));
+  overflow: visible;
+}
+html:not([data-text-size='normal']) .hero-description {
+  font-size: calc(13px * var(--reading-scale)) !important;
+}
+html[data-high-contrast='true'][data-theme='dark'] {
+  --ui-bg: #000;
+  --ui-panel: #000;
+  --ui-surface: #111;
+  --ui-text: #fff;
+  --ui-secondary: #fff;
+  --ui-muted: #ddd;
+  --ui-line: #fff;
+  --ui-hover: #222;
+}
+html[data-high-contrast='true'][data-theme='light'] {
+  --ui-bg: #fff;
+  --ui-panel: #fff;
+  --ui-surface: #f2f2f2;
+  --ui-text: #000;
+  --ui-secondary: #000;
+  --ui-muted: #222;
+  --ui-line: #000;
+  --ui-hover: #eee;
+}
+html[data-high-contrast='true']
+  :is(
+    .chip,
+    .btn,
+    .member-action,
+    .folder-save-button,
+    input,
+    select,
+    textarea,
+    summary,
+    .tech-card
+  ) {
+  border: 1px solid var(--ui-line) !important;
+}
+html[data-high-contrast='true']
+  :is(
+    .card-section,
+    .card-en,
+    .card-description,
+    .media-indicator,
+    .media-placeholder-label
+  ) {
+  color: var(--ui-text) !important;
+}
+html[data-link-underlines='true'] a:not(.brand) {
+  text-decoration: underline !important;
+  text-underline-offset: 0.22em;
+}
+html[data-reduce-motion='true'] {
+  scroll-behavior: auto !important;
+}
+html[data-reduce-motion='true'] *,
+html[data-reduce-motion='true'] *::before,
+html[data-reduce-motion='true'] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+.accessibility-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ui-line);
+  min-width: 0;
+}
+.accessibility-control > span {
+  min-width: 0;
+}
+.accessibility-control small {
+  display: block;
+  color: var(--ui-secondary);
+  margin-top: 6px;
+  line-height: 1.7;
+}
+.accessibility-control input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  accent-color: var(--ui-text);
+}
+.accessibility-control select {
+  min-height: 44px;
+  max-width: 100%;
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  padding: 8px;
+  border: 1px solid var(--ui-line);
+  border-radius: 6px;
+}
+.media-motion-description {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 12px 0 24px;
+}
+#memberLibraryChoices .bulk-selection > input[type='search'] {
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  flex: auto;
+}
+@media (max-width: 420px) {
+  .accessibility-control:has(select) {
+    flex-wrap: wrap;
+  }
+  .accessibility-control select {
+    width: 100%;
+  }
+  html:not([data-text-size='normal']) .catalog .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-heading {
+    flex-wrap: wrap;
+  }
+}
+.menu-accessibility {
+  margin: 12px;
+  padding: 8px;
+}
+.menu-accessibility summary {
+  min-height: 44px;
+  cursor: pointer;
+}
+.menu-accessibility label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 13px;
+}
+.menu-accessibility select {
+  max-width: 100%;
+  min-height: 44px;
+  background: var(--ui-panel);
+  color: var(--ui-text);
+}
+html:not([data-text-size='normal']) .legal-main :is(p, li, a) {
+  font-size: calc(14px * var(--reading-scale));
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+[data-member-panel='accessibility'] .accessibility-control:last-child {
+  border-bottom: 0;
+}
+html[data-theme] .catalog .search-field:is(:hover, :focus-within) {
+  outline: none;
+  box-shadow: none !important;
+  border-color: var(--ui-line) !important;
+}
+html[data-theme] .catalog #searchInput:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+html[data-theme] .catalog #searchInput:focus::placeholder {
+  color: transparent !important;
+}
+html[data-theme] .catalog #sortSelect:is(:hover, :focus) {
+  background: var(--ui-panel) !important;
+  border-color: var(--ui-line) !important;
+  box-shadow: none !important;
+}
+html[data-theme][data-pointer-input='true'] .catalog #sortSelect:focus-visible {
+  outline: none !important;
+}
+html[data-theme]:not([data-pointer-input='true']) .catalog .search-field:focus-within {
+  outline: 2px solid var(--ui-text);
+  outline-offset: 3px;
+}
+html[data-theme] #closeDetail:is(:focus, :focus-visible),
+html[data-theme] .catalog #searchInput:is(:focus, :focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+html[data-theme] .catalog .search-field:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+}
+html[data-theme] #closeDetail:focus-visible {
+  background: var(--ui-hover) !important;
+}

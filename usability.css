@@ -1,0 +1,191 @@
+.bulk-selection {
+  position: sticky;
+  top: 0;
+  background: var(--ui-panel, #171717);
+  padding: 12px 0;
+  z-index: 1;
+}
+.bulk-selection > input {
+  width: 100%;
+  min-height: 44px;
+}
+.bulk-selection > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.bulk-selection p {
+  font-size: 12px;
+}
+.folder-save-dialog {
+  box-sizing: border-box;
+  width: min(460px, calc(100% - 28px));
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  background: var(--ui-panel, #151515);
+  color: var(--ui-text, #fff);
+  border: 1px solid var(--ui-line, #444);
+  border-radius: 10px;
+  padding: 24px;
+}
+.folder-save-dialog::backdrop {
+  background: #0009;
+}
+.folder-save-dialog h2 {
+  font-size: 20px;
+}
+.folder-save-dialog p {
+  line-height: 1.7;
+  font-size: 13px;
+}
+.folder-save-list {
+  max-height: 40dvh;
+  overflow: auto;
+}
+.folder-save-list label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 48px;
+  overflow-wrap: anywhere;
+}
+.folder-save-list input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--ui-text, #fff);
+}
+.folder-save-create {
+  border-top: 1px solid var(--ui-line, #444);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.folder-save-create label {
+  display: grid;
+  gap: 8px;
+}
+.folder-save-dialog input:not([type='checkbox']) {
+  min-height: 44px;
+  width: 100%;
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--ui-line, #666);
+  border-radius: 6px;
+  padding: 10px;
+}
+.folder-save-dialog button,
+.bulk-selection button {
+  min-height: 44px;
+  border: 1px solid var(--ui-line, #666);
+  background: transparent;
+  color: inherit;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.folder-save-dialog button:disabled {
+  opacity: 0.45;
+}
+.folder-save-create button {
+  margin-top: 10px;
+}
+.folder-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  border-radius: 6px;
+}
+.folder-save-button:hover {
+  background: var(--ui-hover, #303030);
+}
+.card-actions .open-link {
+  margin-left: auto;
+}
+.card-actions {
+  gap: 4px;
+}
+.detail-actions {
+  flex-wrap: wrap;
+}
+.member-library-dialog [data-choice-row] {
+  min-height: 48px;
+}
+.site-menu-links {
+  display: grid;
+  gap: 6px;
+  margin: 18px 0;
+}
+.site-menu-links a {
+  display: block;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+.site-menu-links a:hover {
+  border-color: var(--ui-line, #444);
+}
+#glossaryPage {
+  display: none;
+  max-width: 1260px;
+  padding: 40px 24px 70px;
+  margin: auto;
+}
+#glossaryPage h1 {
+  font-size: 28px;
+}
+#glossaryPage .search-field {
+  max-width: 640px;
+}
+#glossaryPage .glossary-results {
+  margin-top: 24px;
+}
+.main-content[data-mobile-view='glossary'] > .hero,
+.main-content[data-mobile-view='glossary'] > .catalog,
+.main-content[data-mobile-view='glossary'] > #memberPage {
+  display: none !important;
+}
+.main-content[data-mobile-view='glossary'] > #glossaryPage {
+  display: block;
+}
+.glossary-results details {
+  margin-block: 12px;
+}
+#termSearchLink a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.video-model-prompt label {
+  display: grid;
+  gap: 10px;
+  font-size: 13px;
+}
+.video-model-prompt select {
+  min-height: 44px;
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--ui-panel, #151515);
+  color: var(--ui-text, #fff);
+  border: 1px solid var(--ui-line, #666);
+}
+
+.folder-save-bookmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+}
+.folder-save-bookmark input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--ui-text, #fff);
+}

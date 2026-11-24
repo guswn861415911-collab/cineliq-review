@@ -1,0 +1,270 @@
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --ui-bg: #0b0b0b;
+  --ui-panel: #151515;
+  --ui-surface: #202020;
+  --ui-hover: #303030;
+  --ui-line: #2a2a2a;
+  --ui-text: #fff;
+  --ui-secondary: #b8b8b8;
+  --ui-muted: #a3a3a3;
+  --ui-active: #ededed;
+  --ui-active-text: #111;
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --ui-bg: #fafafa;
+  --ui-panel: #fff;
+  --ui-surface: #f2f2f2;
+  --ui-hover: #eee;
+  --ui-line: #ddd;
+  --ui-text: #171717;
+  --ui-secondary: #626262;
+  --ui-muted: #737373;
+  --ui-active: #171717;
+  --ui-active-text: #fff;
+}
+html[data-theme],
+html[data-theme]
+  :is(
+    .catalog,
+    .sidebar,
+    .detail-panel,
+    .admin-dialog,
+    .member-library-dialog,
+    #memberPage,
+    #glossaryPage,
+    .folder-save-dialog,
+    .merge-notice
+  ) {
+  --paper: var(--ui-bg);
+  --white: var(--ui-panel);
+  --surface: var(--ui-surface);
+  --hover: var(--ui-hover);
+  --elevated: var(--ui-surface);
+  --line: var(--ui-line);
+  --edge: var(--ui-muted);
+  --ink: var(--ui-text);
+  --secondary: var(--ui-secondary);
+  --muted: var(--ui-muted);
+  --focus: var(--ui-text);
+  --dark: var(--ui-text);
+  --member-bg: var(--ui-bg);
+  --member-card: var(--ui-panel);
+  --member-surface: var(--ui-surface);
+  --member-line: var(--ui-line);
+  --member-text: var(--ui-text);
+  --member-secondary: var(--ui-secondary);
+}
+html[data-theme] {
+  --service-bg: var(--ui-bg);
+  --service-surface: var(--ui-panel);
+  --service-line: var(--ui-line);
+  --service-text: var(--ui-text);
+  --service-secondary: var(--ui-secondary);
+  --service-muted: var(--ui-muted);
+}
+html[data-theme] body,
+html[data-theme] .main-content {
+  background: var(--ui-bg);
+  color: var(--ui-text);
+}
+html[data-theme]
+  :is(
+    .site-header,
+    .sidebar,
+    .catalog,
+    .detail-panel,
+    .admin-dialog,
+    .member-library-dialog,
+    #memberPage,
+    #glossaryPage,
+    .folder-save-dialog,
+    .merge-notice
+  ) {
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  border-color: var(--ui-line);
+}
+html[data-theme]
+  .site-header
+  :is(.brand-wordmark, .brand-caption, .nav-toggle, .member-toggle),
+html[data-theme] .catalog :is(.card-title, .card-en, .open-link),
+html[data-theme] #memberPage :is(h1, h2, h3, strong) {
+  color: var(--ui-text) !important;
+}
+html[data-theme]
+  .catalog
+  :is(
+    .tech-card,
+    .search-field,
+    .toolbar select,
+    .chip:not(.active),
+    .copy-icon-btn,
+    .btn.outline
+  ),
+html[data-theme]
+  :is(
+    .member-info-card,
+    .member-nav-card,
+    .member-folder-row,
+    .member-technique,
+    .prompt-box,
+    .lesson-note,
+    .lesson-prompt,
+    .lesson-related-card
+  ) {
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  border-color: var(--ui-line);
+  box-shadow: none;
+}
+html[data-theme] .catalog .card-media,
+html[data-theme] .detail-media.empty {
+  background: var(--ui-surface);
+  border-color: var(--ui-line);
+}
+html[data-theme] .catalog :is(.card-description, .card-section, .card-en),
+html[data-theme] #memberPage p,
+html[data-theme] #memberPage small {
+  color: var(--ui-secondary);
+}
+html[data-theme] .catalog .chip.active,
+html[data-theme] .sidebar .nav-btn.active {
+  background: var(--ui-active) !important;
+  color: var(--ui-active-text) !important;
+  border-color: var(--ui-active);
+}
+html[data-theme] .sidebar .section-btn.active {
+  background: var(--ui-hover);
+  color: var(--ui-text);
+  box-shadow: inset 2px 0 var(--ui-text);
+}
+html[data-theme] .catalog .search-field input,
+html[data-theme]
+  :is(.member-library-dialog, .admin-dialog, #memberPage)
+  :is(input, select, textarea) {
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  border-color: var(--ui-line);
+}
+html[data-theme] .catalog .search-field input::placeholder,
+html[data-theme] input::placeholder {
+  color: var(--ui-muted);
+}
+html[data-theme] .catalog .tech-card:hover {
+  background: var(--ui-panel);
+  border-color: var(--ui-muted);
+  box-shadow: none;
+}
+html[data-theme] :is(.modal-close, .member-auth-close) {
+  background: var(--ui-surface);
+  color: var(--ui-text);
+}
+html[data-theme] .member-setting-row select,
+.menu-theme select {
+  min-height: 44px;
+  background: var(--ui-panel);
+  color: var(--ui-text);
+  border: 1px solid var(--ui-line);
+  padding: 8px;
+  border-radius: 6px;
+  max-width: 100%;
+}
+.menu-theme {
+  display: grid;
+  gap: 8px;
+  margin: 18px 12px;
+  font-size: 12px;
+}
+.theme-setting {
+  flex-wrap: wrap;
+}
+.theme-setting > div {
+  min-width: 110px;
+}
+.theme-setting select {
+  margin-left: auto;
+}
+.member-language-note {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: var(--ui-secondary);
+}
+html[data-theme] #memberPage .member-technique-open {
+  color: var(--ui-text);
+}
+html[data-theme] .catalog [data-registration-group][hidden] {
+  display: none !important;
+}
+html[data-theme]
+  :is(
+    .site-header,
+    .sidebar,
+    .detail-panel,
+    .admin-dialog,
+    .member-library-dialog,
+    #memberPage,
+    .folder-save-dialog
+  ) {
+  background: var(--ui-bg) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-line) !important;
+}
+html[data-theme] .catalog .tech-card,
+html[data-theme]
+  .catalog
+  :is(.search-field, .toolbar select, .chip:not(.active), .copy-icon-btn, .btn.outline) {
+  background: var(--ui-panel) !important;
+  color: var(--ui-text) !important;
+  border-color: var(--ui-line) !important;
+}
+html[data-theme] .catalog :is(.card-title, .card-en, .card-description, .card-section) {
+  color: var(--ui-text) !important;
+}
+html[data-theme] .catalog .card-media {
+  background: var(--ui-surface) !important;
+  border-color: var(--ui-line) !important;
+}
+html[data-theme] .catalog .tech-card::after {
+  border-color: var(--ui-line);
+}
+html[data-theme]
+  .catalog
+  :is(.eyebrow.dark, .count-label, .section-head-note, .filter-label, .result-summary) {
+  color: var(--ui-secondary) !important;
+}
+html[data-theme] .catalog :is(.media-indicator, .media-placeholder-label) {
+  color: var(--ui-secondary) !important;
+}
+html[data-theme]
+  .member-dialog
+  :is(.member-email-divider, .member-auth-links button, .member-legal a) {
+  color: var(--ui-text) !important;
+}
+html[data-theme] .member-dialog [data-auth-mode] {
+  color: var(--ui-text) !important;
+}
+html[data-theme] .member-dialog a[href$='privacy.html'],
+html[data-theme] .member-dialog a[href$='terms.html'] {
+  color: var(--ui-text) !important;
+}
+html[data-theme] .legal-page {
+  --legal-text: var(--ui-text);
+  --legal-muted: var(--ui-secondary);
+  --dark-line: var(--ui-line);
+  --focus: var(--ui-text);
+}
+html[data-theme] .legal-page :is(h1, h2, .legal-home-link, .legal-top-link) {
+  color: var(--ui-text);
+}
+html[data-theme] .member-library-dialog small {
+  color: var(--ui-secondary);
+}
+html[data-theme] .member-library-dialog #cancelMemberLibrary {
+  color: var(--ui-text) !important;
+  background: var(--ui-panel) !important;
+  border-color: var(--ui-line) !important;
+}

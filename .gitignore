@@ -1,0 +1,15 @@
+.env
+.env.*
+.vercel/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+work/
+outputs/
+*.log
+*.tmp
+*.pem
+*.key

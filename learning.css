@@ -1,0 +1,224 @@
+#detailModal .lesson-content {
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+#detailModal .detail-summary {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--secondary);
+  margin: 0 0 24px;
+}
+.lesson-section {
+  margin-top: 32px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.lesson-section h3,
+.lesson-prompt h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+}
+.lesson-section h3 > span {
+  color: var(--muted);
+  font-size: 12px;
+  margin-right: 7px;
+  letter-spacing: 0.5px;
+}
+.lesson-section p {
+  margin: 0 0 12px;
+}
+.lesson-section ul,
+.lesson-examples {
+  margin: 0;
+  padding-left: 22px;
+}
+.lesson-section li + li {
+  margin-top: 10px;
+}
+.lesson-note {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+.lesson-legacy {
+  margin: 24px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.lesson-legacy summary {
+  min-height: 44px;
+  display: list-item;
+  align-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.lesson-legacy .detail-description {
+  margin: 12px 0 4px;
+}
+.lesson-prompts {
+  display: grid;
+  gap: 22px;
+  margin-top: 32px;
+}
+.lesson-prompt {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  min-width: 0;
+}
+.lesson-prompt-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.lesson-prompt-head h3 {
+  margin: 0 0 3px;
+  font-size: 15px;
+}
+.lesson-prompt-head p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.lesson-prompt-head button {
+  min-height: 44px;
+  flex: none;
+}
+.lesson-prompt-text {
+  margin: 0;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.lesson-related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.lesson-related-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--secondary);
+  text-align: left;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s;
+}
+.lesson-related-card:hover {
+  border-color: var(--muted);
+  background: var(--surface);
+}
+.lesson-related-card strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.lesson-related-card small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.lesson-related-media {
+  display: block;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--surface);
+  margin-bottom: 6px;
+  width: 100%;
+}
+.lesson-related-media .card-media {
+  height: 110px !important;
+  min-height: 0 !important;
+  width: 100%;
+  aspect-ratio: auto !important;
+  border: 0 !important;
+}
+.lesson-related-media :is(img, video) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lesson-related-media :is(.media-placeholder-label, .media-indicator) {
+  display: none;
+}
+.lesson-related-difference {
+  font-size: 12px;
+  line-height: 1.8;
+  flex: 1;
+}
+.lesson-related-open {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+}
+.lesson-related-card:focus-visible,
+.lesson-legacy summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .lesson-related-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lesson-related-card {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 5px 12px;
+  }
+  .lesson-related-media {
+    grid-row: 1/5;
+    height: 100%;
+    min-height: 100px;
+    margin: 0;
+  }
+  .lesson-related-media .card-media {
+    height: 100% !important;
+    min-height: 100px !important;
+  }
+  .lesson-related-difference {
+    grid-column: 2;
+  }
+  .lesson-related-open {
+    grid-column: 2;
+  }
+  .lesson-prompt {
+    padding: 16px;
+  }
+  .lesson-section {
+    margin-top: 26px;
+    padding-top: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lesson-related-card {
+    transition: none;
+  }
+}

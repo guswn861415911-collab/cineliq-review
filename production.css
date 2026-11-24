@@ -1,0 +1,153 @@
+.practice-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  margin: 2px 0 2px 6px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  vertical-align: middle;
+  letter-spacing: 0.3px;
+}
+.practice-disclosure {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.practice-disclosure summary {
+  line-height: 1.7;
+  padding: 5px 0;
+}
+.practice-disclosure summary small {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 7px;
+}
+.practice-disclosure p {
+  margin: 12px 0;
+}
+.practice-disclosure h4 {
+  font-size: 13px;
+  color: var(--ink);
+  margin: 18px 0 8px;
+}
+.practice-disclosure ul {
+  padding-left: 20px;
+}
+.practice-disclosure li + li {
+  margin-top: 10px;
+}
+.practice-facts {
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.85;
+}
+.practice-facts > div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.practice-facts dt {
+  color: var(--muted);
+  font-weight: 600;
+}
+.practice-facts dd {
+  margin: 0;
+  white-space: pre-line;
+  min-width: 0;
+}
+.practice-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.practice-links .btn,
+.practice-disclosure > .btn,
+.practice-prompt .btn {
+  min-height: 44px;
+  white-space: normal;
+  text-align: left;
+}
+.practice-sequence .btn:not(:last-child)::after {
+  content: '→';
+  margin-left: 5px;
+  color: var(--muted);
+}
+.practice-sources {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.practice-sources a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.practice-prompt {
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 8px;
+}
+.practice-prompt .lesson-prompt-head {
+  align-items: center;
+  margin: 8px 0 14px;
+}
+.practice-prompt .lesson-prompt-head h4 {
+  margin: 0;
+  flex: 1 1 160px;
+}
+.practice-issue {
+  margin: 12px 0;
+  background: var(--surface);
+}
+.practice-issue summary {
+  font-size: 12px;
+}
+.practice-term-browser {
+  margin: 18px 0 24px;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.85;
+}
+.practice-term-browser > summary {
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.practice-term-browser .practice-term-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.practice-term-results .practice-disclosure {
+  margin: 0;
+  align-self: start;
+}
+.practice-term-results .btn {
+  font-size: 11px;
+}
+.practice-disclosure summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .practice-facts > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
+  .practice-term-browser .practice-term-results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .practice-disclosure summary small {
+    display: block;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,89 @@
+#memberDeletion {
+  min-width: 0;
+}
+#memberDeletion .member-info-card {
+  margin-bottom: 24px;
+}
+#memberDeletion ul {
+  padding-left: 20px;
+  color: var(--member-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+#memberDeletion p {
+  font-size: 13px;
+}
+#memberDeletion strong {
+  color: var(--member-text);
+}
+#memberDeletion a:not(.member-action) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#memberDeletionIdentity {
+  overflow-wrap: anywhere;
+}
+#memberDeletion input:not([type='checkbox']) {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid var(--member-line);
+  border-radius: 6px;
+  background: var(--member-bg);
+  color: var(--member-text);
+  padding: 10px 12px;
+  margin: 10px 0 14px;
+  font: inherit;
+}
+#memberDeletion label {
+  display: block;
+  font-size: 13px;
+  line-height: 1.8;
+}
+#memberDeletion .member-deletion-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 44px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+#memberDeletionConsent {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin: 3px 0;
+  accent-color: #fff;
+}
+.member-withdraw-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.member-deletion-reauth,
+.member-deletion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+#memberDeletionEmailAuth {
+  margin-top: 18px;
+}
+#memberDeletion .member-action {
+  min-height: 44px;
+  white-space: normal;
+}
+#memberDeletionStatus:empty {
+  display: none;
+}
+@media (max-width: 767px) {
+  .member-deletion-actions {
+    flex-direction: column;
+  }
+  .member-deletion-actions > * {
+    text-align: center;
+    justify-content: center;
+  }
+}

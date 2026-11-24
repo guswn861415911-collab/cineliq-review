@@ -1,0 +1,180 @@
+:root {
+  --service-bg: #0b0b0b;
+  --service-surface: #151515;
+  --service-line: #2a2a2a;
+  --service-text: #fff;
+  --service-secondary: #aaa;
+  --service-muted: #888;
+}
+.service-menu {
+  border-top: 1px solid var(--service-line);
+  margin-top: 28px;
+  padding-top: 22px;
+  color: var(--service-secondary);
+}
+.service-menu h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--service-secondary);
+}
+.service-menu nav {
+  display: grid;
+  gap: 2px;
+}
+.service-menu a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.service-menu small {
+  display: block;
+  margin-top: 14px;
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--service-muted);
+}
+.service-menu a:hover,
+.service-footer a:hover {
+  color: var(--service-text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.service-menu a:focus-visible,
+.service-footer a:focus-visible {
+  outline: 2px solid var(--service-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.sidebar:has(.service-menu) {
+  background: var(--service-bg) !important;
+  border-color: var(--service-line) !important;
+}
+body.menu-open .sidebar:has(.service-menu) {
+  transition-property: transform, opacity !important;
+}
+.sidebar:has(.service-menu) .sidebar-inner {
+  padding-bottom: max(32px, env(safe-area-inset-bottom)) !important;
+}
+.service-footer {
+  background: var(--service-bg);
+  color: var(--service-secondary);
+  border-top: 1px solid var(--service-line);
+  flex-shrink: 0;
+}
+.service-footer-inner {
+  width: 100%;
+  max-width: var(--content-max, 1260px);
+  margin-inline: auto;
+  padding: 28px clamp(20px, 4vw, 48px) max(24px, env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 28px;
+  align-items: start;
+}
+.service-footer .brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--service-text);
+  font-size: 22px;
+}
+.service-footer p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.service-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 22px;
+}
+.service-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--service-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.service-footer small {
+  grid-column: 1/-1;
+  font-size: 11px;
+  color: var(--service-muted);
+  line-height: 1.7;
+}
+.service-footer [aria-current='page'] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.main-content > .service-footer {
+  display: none;
+}
+.main-content[data-mobile-view='my'] > .service-footer {
+  display: block;
+  margin-top: auto;
+}
+.main-content[data-mobile-view='my'] {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100svh - var(--header-height));
+}
+.main-content[data-mobile-view='my'] > #memberPage {
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+}
+.legal-page:has(.service-footer) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background: var(--service-bg);
+}
+.legal-page:has(.service-footer) > .legal-main {
+  flex: 1;
+}
+.legal-page:has(.service-footer) > .service-footer {
+  margin-top: auto;
+}
+.contact-message {
+  padding: 24px;
+  background: var(--service-surface);
+  border: 1px solid var(--service-line);
+  border-radius: 12px;
+  max-width: 680px;
+}
+.contact-message p {
+  line-height: 1.8;
+  margin: 0 0 16px;
+  overflow-wrap: anywhere;
+}
+.contact-message p:last-child {
+  margin-bottom: 0;
+}
+.contact-message a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  .service-footer-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding-top: 24px;
+  }
+  .service-footer nav {
+    gap: 0 18px;
+  }
+  .service-menu {
+    margin-top: 26px;
+  }
+}

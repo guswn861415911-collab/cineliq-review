@@ -1,0 +1,101 @@
+.image-stack {
+  min-width: 0;
+  --stack-offset: 10px;
+  margin: 0;
+}
+.image-stack-stage {
+  position: relative;
+  margin-right: var(--stack-offset);
+  margin-bottom: var(--stack-offset);
+  isolation: isolate;
+  touch-action: pan-y pinch-zoom;
+}
+.image-stack-frame,
+.image-stack-back {
+  aspect-ratio: 16/9;
+  border: 1px solid var(--ui-line, #444);
+  border-radius: var(--radius, 12px);
+  overflow: hidden;
+  background: var(--ui-surface, #202020);
+}
+.image-stack-frame {
+  position: relative;
+  z-index: 1;
+}
+.image-stack-back {
+  position: absolute;
+  inset: var(--stack-offset) calc(-1 * var(--stack-offset)) calc(-1 * var(--stack-offset))
+    var(--stack-offset);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.image-stack-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.image-stack-slide[hidden] {
+  display: none !important;
+}
+.image-stack :is(.image-stack-slide, .image-stack-back) img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  background: var(--ui-surface, #202020);
+}
+.image-stack-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 14px;
+}
+.image-stack-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--ui-line, #555);
+  border-radius: 6px;
+  background: var(--ui-panel, #151515);
+  color: var(--ui-text, #fff);
+  font-size: 25px;
+  line-height: 1;
+}
+.image-stack-controls button:hover {
+  background: var(--ui-hover, #303030);
+}
+.image-stack-controls output {
+  min-width: 54px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ui-secondary, #bbb);
+  font-variant-numeric: tabular-nums;
+}
+
+.image-stack {
+  position: relative;
+}
+.image-stack-controls {
+  min-height: 44px;
+}
+.image-stack-controls button {
+  position: absolute;
+  top: calc((100% - 68px) / 2);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.image-stack-controls [data-image-step='-1'] {
+  left: 8px;
+}
+.image-stack-controls [data-image-step='1'] {
+  right: calc(var(--stack-offset) + 8px);
+}
+
+html[data-theme] .image-stack:focus-visible {
+  outline: 1px solid var(--ui-muted, #999) !important;
+  outline-offset: 4px;
+}

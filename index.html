@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#111214" />
+    <script src="theme.js?v=1"></script>
+    <script src="accessibility.js?v=1"></script>
+    <title>CINELIQ | 카메라 기법 아틀라스</title>
+    <meta
+      name="description"
+      content="구도부터 조명, 색감, 카메라 무빙까지. AI 이미지·영상 제작을 위한 시각 연출 가이드."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CINELIQ" />
+    <meta property="og:title" content="CINELIQ | 카메라 기법 아틀라스" />
+    <meta
+      property="og:description"
+      content="구도부터 조명, 색감, 카메라 무빙까지. AI 이미지·영상 제작을 위한 시각 연출 가이드."
+    />
+    <meta property="og:url" content="https://cineliq.art/" />
+    <meta property="og:image" content="https://cineliq.art/assets/og-cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CINELIQ 카메라 기법 아틀라스" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CINELIQ | 카메라 기법 아틀라스" />
+    <meta
+      name="twitter:description"
+      content="구도부터 조명, 색감, 카메라 무빙까지. AI 이미지·영상 제작을 위한 시각 연출 가이드."
+    />
+    <meta name="twitter:image" content="https://cineliq.art/assets/og-cover.png" />
+    <meta name="twitter:image:alt" content="CINELIQ 카메라 기법 아틀라스" />
+    <link rel="stylesheet" href="styles.css?v=media-solid-1" />
+    <link rel="stylesheet" href="member-library.css?v=1" />
+    <link rel="stylesheet" href="detail-navigation.css?v=2" />
+    <link rel="stylesheet" href="image-carousel.css?v=1" />
+    <script src="image-carousel.js?v=1" defer></script>
+    <link rel="stylesheet" href="sort-menu.css?v=1" />
+    <script src="sort-menu.js?v=1" defer></script>
+    <script src="data.js?v=beginner-copy-2" defer></script>
+    <script src="technique-names.js?v=1" defer></script>
+    <script src="learning-data.js?v=1" defer></script>
+    <script src="terminology-data.js?v=1" defer></script>
+    <script src="production-data.js?v=1" defer></script>
+    <script src="production-ui.js?v=bookmark-folder-1" defer></script>
+    <script src="full-learning-data.js?v=1" defer></script>
+    <script src="full-learning-ui.js?v=bookmark-folder-1" defer></script>
+    <script src="video-models.js?v=1" defer></script>
+    <script src="learning-ui.js?v=bookmark-folder-1" defer></script>
+    <link rel="stylesheet" href="learning.css?v=1" />
+    <link rel="stylesheet" href="production.css?v=1" />
+    <script src="media-config.js" defer></script>
+    <script src="media-cloud.js?v=bookmark-folder-1" defer></script>
+    <script src="media-admin.js?v=menu-admin-1" defer></script>
+    <script src="bulk-selection.js?v=1" defer></script>
+    <script src="folder-save.js?v=2" defer></script>
+    <script src="member-library.js?v=bookmark-folder-1" defer></script>
+    <script src="member-deletion.js?v=1" defer></script>
+    <script src="member-merge.js?v=1" defer></script>
+    <script src="member.js?v=bookmark-folder-1" defer></script>
+    <script src="glossary.js?v=1" defer></script>
+    <script src="content-types.js?v=2" defer></script>
+    <script src="app.js?v=image-stack-1" defer></script>
+    <link rel="stylesheet" href="member-deletion.css?v=1" />
+    <link rel="stylesheet" href="member-merge.css?v=1" />
+    <link rel="stylesheet" href="service-info.css?v=1" />
+    <script src="service-info.js?v=1" defer></script>
+    <link rel="icon" href="favicon.ico?v=1" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="favicon.svg?v=1" type="image/svg+xml" sizes="any" />
+    <link rel="icon" href="favicon-32x32.png?v=1" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" sizes="180x180" />
+    <link rel="stylesheet" href="usability.css?v=2" />
+    <link rel="stylesheet" href="theme.css?v=1" />
+    <link rel="stylesheet" href="accessibility.css?v=4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#library" data-site-view="library"
+      >기법 라이브러리 본문으로 바로가기</a
+    >
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="header-start">
+          <button
+            id="navToggle"
+            class="btn ghost nav-toggle"
+            type="button"
+            aria-label="카메라 기법 탐색 메뉴"
+            aria-expanded="false"
+            aria-controls="techniqueNav"
+          >
+            <span aria-hidden="true"></span>
+          </button>
+          <a class="brand" href="#home" aria-label="CINELIQ 홈"
+            ><span class="brand-wordmark">CINELIQ</span
+            ><span class="brand-caption">CAMERA ATLAS</span></a
+          >
+        </div>
+        <div class="header-actions">
+          <button id="memberToggle" class="member-toggle" type="button">
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5" />
+            </svg>
+            <span class="member-toggle-label">로그인</span>
+          </button>
+        </div>
+      </header>
+      <div class="layout">
+        <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+        <aside
+          id="techniqueNav"
+          class="sidebar"
+          aria-label="학습 탐색"
+          aria-hidden="true"
+          inert
+        >
+          <div class="sidebar-inner">
+            <div class="mobile-menu-top">
+              <button id="mobileMenuClose" type="button" aria-label="메뉴 닫기">×</button
+              ><span>CINELIQ / EXPLORE</span>
+            </div>
+            <p class="overline">EXPLORE THE ATLAS</p>
+            <h2>카메라 기법 탐색</h2>
+            <div class="nav-stack" id="majorNav"></div>
+            <div class="sidebar-rule"></div>
+            <p class="side-label">세부 분야</p>
+            <div id="sectionNav" class="section-nav"></div>
+            <div class="mobile-menu-filters">
+              <p class="side-label">SCENE TYPE / 장면 유형</p>
+              <div id="mobileTagFilters" class="mobile-filter-options"></div>
+              <p class="side-label">MEDIA / 콘텐츠 유형</p>
+              <div id="mobileMediaFilters" class="mobile-filter-options"></div>
+            </div>
+            <div class="sidebar-rule"></div>
+            <nav class="site-menu-links" aria-label="실무 학습">
+              <a href="#glossary" data-site-view="glossary">실무 용어집</a>
+            </nav>
+            <label class="menu-theme"
+              >화면 모드<select data-theme-control aria-label="메뉴 화면 모드">
+                <option value="dark">다크</option>
+                <option value="light">라이트</option>
+                <option value="system">시스템 설정</option>
+              </select></label
+            >
+            <details class="menu-accessibility">
+              <summary>접근성</summary>
+              <label
+                >글자 크기<select data-a11y="textSize">
+                  <option value="normal">기본</option>
+                  <option value="large">크게</option>
+                  <option value="xlarge">매우 크게</option>
+                </select></label
+              ><label><input type="checkbox" data-a11y="contrast" /> 고대비 모드</label
+              ><label><input type="checkbox" data-a11y="motion" /> 움직임 줄이기</label
+              ><label><input type="checkbox" data-a11y="links" /> 링크 밑줄 표시</label
+              ><label
+                ><input type="checkbox" data-a11y="captions" /> 실제 자막 우선</label
+              >
+            </details>
+            <div class="sidebar-admin">
+              <button
+                id="adminToggle"
+                class="btn ghost small"
+                type="button"
+                aria-haspopup="dialog"
+                hidden
+              >
+                <span aria-hidden="true">↗</span>
+                <span id="adminText">관리자 로그인</span>
+              </button>
+            </div>
+            <section
+              class="service-menu"
+              data-service-menu
+              aria-label="서비스 안내"
+            ></section>
+          </div>
+        </aside>
+        <main id="home" class="main-content">
+          <section class="hero">
+            <video
+              class="hero-background-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/cineliq-hero-pc-poster.jpg"
+              aria-hidden="true"
+            ></video>
+            <div class="hero-video-shade" aria-hidden="true"></div>
+            <div class="hero-copy">
+              <p class="eyebrow">
+                <span class="eyebrow-line"></span> THE COMPLETE CAMERA GUIDE
+              </p>
+              <h1>장면을 이해하고,<br /><em>연출을 설계하다.</em></h1>
+              <p class="hero-description">
+                구도·무빙·조명·색감·아트 스타일까지. 시각 언어를 배우고<br
+                  class="desktop-break"
+                />
+                바로 복사해 활용하는 AI 영상 제작 아틀라스.
+              </p>
+              <a
+                class="hero-explore"
+                href="#library"
+                aria-label="기법 라이브러리 탐색하기"
+                ><span>기법 라이브러리 탐색하기</span><span aria-hidden="true">→</span></a
+              >
+              <div class="hero-meta">
+                <span><b id="totalCount">414</b> TECHNIQUES</span
+                ><span class="meta-divider"></span
+                ><span><b id="collectionCount">18</b> COLLECTIONS</span
+                ><span class="admin-only-count" hidden
+                  ><span class="meta-divider"></span
+                  ><span><b id="readyCount">0</b> MEDIA READY</span></span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="catalog" aria-labelledby="catalogTitle">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow dark">THE LIBRARY</p>
+                <h2 id="catalogTitle" tabindex="-1">
+                  기법 라이브러리 <span id="visibleCount" class="count-label">414</span>
+                </h2>
+              </div>
+              <div class="section-head-note">
+                원하는 기법을 찾고, 나만의 장면에 적용해 보세요.
+              </div>
+            </div>
+            <div class="toolbar">
+              <label class="search-field"
+                ><span class="search-symbol">⌕</span
+                ><input
+                  id="searchInput"
+                  type="search"
+                  placeholder="기법 이름, 영문 명칭, 설명 검색..."
+                  autocomplete="off"
+                  aria-label="기법 검색"
+                /><kbd>/</kbd></label
+              >
+              <button
+                id="filterToggle"
+                class="btn outline small filter-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="filterControls"
+              >
+                정렬 및 필터 <span aria-hidden="true">⌄</span>
+              </button>
+              <div id="filterControls" class="filter-controls">
+                <div class="sort-controls">
+                  <select id="sortSelect" aria-label="정렬 방식">
+                    <option value="number">기본 순서</option>
+                    <option value="az">영문 A–Z</option>
+                    <option value="za">영문 Z–A</option>
+                    <option value="ko">한글 가나다</option>
+                    <option value="media">미디어 등록 우선</option></select
+                  ><button id="clearFilters" class="btn outline small" type="button">
+                    필터 초기화
+                  </button>
+                </div>
+                <div class="filter-row">
+                  <span class="filter-label">SCENE TYPE</span>
+                  <div class="chip-list" id="tagFilters"></div>
+                </div>
+                <div class="filter-row compact">
+                  <span class="filter-label">콘텐츠 유형</span>
+                  <div class="chip-list" id="mediaFilters">
+                    <button class="chip" data-type="image" aria-pressed="false">
+                      이미지 기법</button
+                    ><button class="chip" data-type="video" aria-pressed="false">
+                      영상 기법
+                    </button>
+                  </div>
+                </div>
+                <div class="filter-row compact" data-registration-group hidden>
+                  <span class="filter-label">등록 상태 · 관리자</span>
+                  <div class="chip-list">
+                    <button class="chip" data-media="all">전체</button
+                    ><button class="chip" data-media="ready">등록 완료</button
+                    ><button class="chip" data-media="missing">미등록</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="resultSummary" class="result-summary" aria-live="polite"></div>
+            <p id="termSearchLink" hidden></p>
+            <div id="cardGrid" class="card-grid"></div>
+            <div id="emptyState" class="empty-state" hidden>
+              <div class="empty-mark">⌕</div>
+              <h3>검색 결과가 없어요</h3>
+              <p>검색어를 줄이거나 필터를 초기화해 보세요.</p>
+              <button class="btn dark" id="emptyReset" type="button">
+                전체 기법 보기
+              </button>
+            </div>
+            <div class="load-more-wrap">
+              <div id="scrollSentinel" class="scroll-sentinel" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <button id="loadMore" class="btn outline" type="button" hidden>
+                기법 더 보기 ↓
+              </button>
+            </div>
+          </section>
+          <section id="glossaryPage" aria-labelledby="glossaryTitle">
+            <h1 id="glossaryTitle" tabindex="-1">실무 용어집</h1>
+            <p>
+              제작·편집 용어 37개와 AI 오류 점검 9개를 보존했습니다. 관련 기법은 각
+              항목에서 열 수 있습니다.
+            </p>
+            <label class="search-field"
+              ><input
+                type="search"
+                aria-label="실무 용어 검색"
+                placeholder="영문·한국어·약어 검색"
+            /></label>
+            <p role="status" aria-live="polite"></p>
+            <div class="glossary-results"></div>
+          </section>
+          <section id="memberPage" aria-labelledby="memberPageTitle">
+            <div class="member-heading">
+              <h1 id="memberPageTitle" tabindex="-1">MY CINELIQ</h1>
+              <p>나만의 촬영 기법 라이브러리</p>
+            </div>
+            <div id="memberGuest">
+              <p>로그인하고 저장한 기법을 확인하세요.</p>
+              <button id="memberGuestLogin" class="member-action" type="button">
+                로그인
+              </button>
+            </div>
+            <div id="memberSignedIn" hidden>
+              <div class="member-workspace">
+                <nav id="memberNav" aria-label="마이페이지 메뉴">
+                  <a class="member-account-link member-nav-card" href="#my/profile"
+                    ><span data-member-icon="user"></span
+                    ><span
+                      ><strong>내 계정</strong
+                      ><small id="memberAccountSummary">회원 정보</small></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <h2>내 라이브러리</h2>
+                  <p class="member-nav-description">
+                    저장한 카메라 기법을 원하는 방식으로 정리하세요.
+                  </p>
+                  <a class="member-nav-card" href="#my/categories"
+                    ><span data-member-icon="layers"></span
+                    ><span
+                      ><strong>기법별 분류</strong
+                      ><small>저장한 기법을 카테고리로 보기</small></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <a class="member-nav-card" href="#my/folders"
+                    ><span data-member-icon="folder"></span
+                    ><span
+                      ><strong>내 폴더</strong
+                      ><small>프로젝트별로 자유롭게 정리</small></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <h2>계정 및 설정</h2>
+                  <a class="member-nav-card" href="#my/accessibility"
+                    ><span data-member-icon="user"></span
+                    ><span><strong>접근성</strong></span
+                    ><span aria-hidden="true">›</span></a
+                  ><a class="member-nav-card member-settings-link" href="#my/profile"
+                    ><span data-member-icon="user"></span
+                    ><span><strong>회원 정보</strong></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <a class="member-nav-card member-settings-link" href="#my/accounts"
+                    ><span data-member-icon="link"></span
+                    ><span><strong>연결된 계정</strong></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <a class="member-nav-card member-settings-link" href="#my/settings"
+                    ><span data-member-icon="settings"></span
+                    ><span><strong>설정</strong></span
+                    ><span aria-hidden="true">›</span></a
+                  >
+                  <a class="member-all-saved" href="#my/bookmarks"
+                    >전체 즐겨찾기 보기 <span id="memberSavedCount">0</span></a
+                  >
+                </nav>
+                <div class="member-content">
+                  <div class="member-detail-heading">
+                    <a id="memberBack" href="#my" aria-label="마이페이지로 돌아가기">‹</a>
+                    <div>
+                      <h2 id="memberViewTitle" tabindex="-1">회원 정보</h2>
+                      <p id="memberViewDescription">
+                        내 계정의 기본 정보를 확인하고 관리할 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <section data-member-panel="profile">
+                    <dl class="member-info-card">
+                      <div>
+                        <dt>이메일</dt>
+                        <dd id="memberEmail"></dd>
+                      </div>
+                      <div>
+                        <dt>이름</dt>
+                        <dd>
+                          <span id="memberDisplayName"></span
+                          ><button
+                            id="editMemberName"
+                            class="member-action"
+                            type="button"
+                          >
+                            이름 수정
+                          </button>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>로그인 수단</dt>
+                        <dd id="memberProviders"></dd>
+                      </div>
+                    </dl>
+                    <div class="member-info-card">
+                      <h3>계정 관리</h3>
+                      <button
+                        id="memberPasswordChange"
+                        class="member-action"
+                        type="button"
+                        hidden
+                      >
+                        비밀번호 변경 메일 받기
+                      </button>
+                      <p id="memberPasswordNote">
+                        이메일 로그인 사용자에게 비밀번호 변경을 제공합니다.
+                      </p>
+                      <a
+                        class="member-action member-withdraw-link"
+                        href="#my/delete-account"
+                        >회원 탈퇴 <span aria-hidden="true">›</span></a
+                      >
+                    </div>
+                    <button
+                      id="memberLogout"
+                      class="member-action member-danger"
+                      type="button"
+                    >
+                      로그아웃
+                    </button>
+                  </section>
+                  <section
+                    id="memberDeletion"
+                    data-member-panel="delete-account"
+                    hidden
+                    aria-label="회원 탈퇴 안내"
+                  >
+                    <div class="member-info-card">
+                      <h3>탈퇴하면 아래 정보가 영구 삭제됩니다</h3>
+                      <p id="memberDeletionIdentity"></p>
+                      <ul>
+                        <li>CINELIQ 회원 계정과 프로필 이름·이메일 등 계정 정보</li>
+                        <li>저장한 즐겨찾기</li>
+                        <li>개인 폴더와 폴더·기법 연결 정보</li>
+                        <li>CINELIQ에 연결된 Google·카카오·이메일 로그인 정보와 세션</li>
+                      </ul>
+                      <p>
+                        <strong>삭제된 개인 데이터는 복구할 수 없습니다.</strong> 다시
+                        가입하면 새로운 CINELIQ 회원으로 처리되며 기존 북마크와 폴더는
+                        복원되지 않습니다.
+                      </p>
+                      <p>
+                        Google·카카오 계정 자체는 삭제되지 않습니다. 계정 연결 해제는
+                        로그인 수단 하나를 분리하는 기능이며, 회원 탈퇴와 다릅니다.
+                      </p>
+                      <p>
+                        공통 카메라 기법, 사이트의 공개 이미지·영상과 다른 회원의 데이터는
+                        삭제하지 않습니다. 관리자나 업로드 소유 계정은 공통 자료 보호를
+                        위해 별도 확인이 필요합니다.
+                      </p>
+                      <p>
+                        플랫폼 보안 로그·백업은 운영 데이터 삭제와 별도로 관리됩니다.
+                        운영자가 법적 보존 또는 별도 확인 대상으로 지정한 계정은 자동
+                        삭제를 중단하고 문의로 안내합니다. 자세한 내용은
+                        <a href="privacy.html">개인정보처리방침</a>과
+                        <a href="contact.html">문의하기</a>를 확인해 주세요.
+                      </p>
+                    </div>
+                    <div class="member-info-card">
+                      <h3>최근 로그인 확인</h3>
+                      <p>
+                        서버가 최근 5분 이내의 로그인 세션을 확인합니다. 세션 갱신만으로는
+                        인증 시간이 연장되지 않습니다. 소셜 재인증 시 원래 연결된 계정을
+                        선택해 주세요.
+                      </p>
+                      <button
+                        id="checkMemberDeletion"
+                        class="member-action"
+                        type="button"
+                      >
+                        탈퇴 가능 여부 확인
+                      </button>
+                      <div class="member-deletion-reauth">
+                        <button
+                          class="member-action"
+                          data-deletion-reauth="google"
+                          type="button"
+                          hidden
+                        >
+                          Google로 다시 인증</button
+                        ><button
+                          class="member-action"
+                          data-deletion-reauth="kakao"
+                          type="button"
+                          hidden
+                        >
+                          카카오로 다시 인증
+                        </button>
+                      </div>
+                      <div id="memberDeletionEmailAuth" hidden>
+                        <label for="memberDeletionPassword">현재 비밀번호</label
+                        ><input
+                          id="memberDeletionPassword"
+                          type="password"
+                          autocomplete="current-password"
+                        /><button
+                          class="member-action"
+                          data-deletion-reauth="email"
+                          type="button"
+                        >
+                          이메일 계정 다시 인증
+                        </button>
+                      </div>
+                    </div>
+                    <form id="memberDeletionForm" class="member-info-card">
+                      <label class="member-deletion-consent"
+                        ><input id="memberDeletionConsent" type="checkbox" /> 삭제 대상과
+                        복구 불가능함을 확인했으며 회원 탈퇴에 동의합니다.</label
+                      >
+                      <label for="memberDeletionPhrase"
+                        >최종 확인을 위해 ‘CINELIQ 탈퇴’를 입력해 주세요.</label
+                      ><input
+                        id="memberDeletionPhrase"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="CINELIQ 탈퇴"
+                      />
+                      <p id="memberDeletionStatus" role="status" aria-live="polite"></p>
+                      <div class="member-deletion-actions">
+                        <a class="member-action" href="#my/profile">취소하고 돌아가기</a
+                        ><button
+                          id="confirmMemberDeletion"
+                          class="member-action member-danger"
+                          type="submit"
+                          disabled
+                        >
+                          회원 탈퇴 확정
+                        </button>
+                      </div>
+                    </form>
+                  </section>
+                  <section
+                    id="memberIdentities"
+                    data-member-panel="accounts"
+                    aria-labelledby="memberIdentitiesTitle"
+                  >
+                    <h2 id="memberIdentitiesTitle" class="member-visually-hidden">
+                      연결된 계정
+                    </h2>
+                    <ul>
+                      <li data-identity-provider="google">
+                        <strong
+                          ><img
+                            class="member-provider-logo"
+                            src="assets/google-signin-g.png"
+                            width="24"
+                            height="24"
+                            alt=""
+                          />Google</strong
+                        ><span></span
+                        ><button class="member-action" type="button" disabled>
+                          연결하기
+                        </button>
+                      </li>
+                      <li data-identity-provider="kakao">
+                        <strong
+                          ><img
+                            class="member-provider-logo"
+                            src="assets/kakao-signin-symbol.svg"
+                            width="24"
+                            height="24"
+                            alt=""
+                          />카카오</strong
+                        ><span></span
+                        ><button class="member-action" type="button" disabled>
+                          연결하기
+                        </button>
+                      </li>
+                    </ul>
+                    <p id="memberIdentityStatus" role="status"></p>
+                    <button
+                      id="retryMemberIdentities"
+                      class="member-action"
+                      type="button"
+                      hidden
+                    >
+                      연결 상태 다시 확인
+                    </button>
+                    <div class="member-info-card">
+                      <h3>계정 연결 안내</h3>
+                      <p>
+                        같은 CINELIQ 계정에 연결한 로그인 수단은 즐겨찾기와 내 폴더를 함께
+                        사용합니다. 다른 계정에 이미 연결된 로그인 수단은 두 계정의 소유권
+                        확인과 안전한 통합 절차가 필요합니다. 통합을 위해 기존 계정을
+                        탈퇴하지 마세요. 마지막 소셜 로그인 수단은 해제할 수 없습니다.
+                      </p>
+                    </div>
+                  </section>
+                  <section data-member-panel="bookmarks">
+                    <div class="member-filters">
+                      <input
+                        id="favoriteSearch"
+                        type="search"
+                        placeholder="저장한 기법 검색"
+                        aria-label="저장한 기법 검색"
+                      /><select id="favoriteSort" aria-label="즐겨찾기 정렬">
+                        <option value="recent">최근 저장순</option>
+                        <option value="name">이름순</option>
+                      </select>
+                    </div>
+                    <p id="favoriteStatus" role="status"></p>
+                    <button
+                      id="retryMemberFavorites"
+                      class="member-action"
+                      type="button"
+                      hidden
+                    >
+                      즐겨찾기 다시 불러오기
+                    </button>
+                    <p id="favoriteEmpty">저장한 기법이 없습니다.</p>
+                    <ul id="favoriteList"></ul>
+                    <a class="member-action member-explore-link" href="#library"
+                      >기법 탐색하기</a
+                    >
+                  </section>
+                  <section data-member-panel="categories">
+                    <p id="memberCategoryCount"></p>
+                    <div id="memberCategoryList" class="member-stack"></div>
+                  </section>
+                  <section data-member-panel="folders">
+                    <button
+                      id="newMemberFolder"
+                      class="member-action member-primary"
+                      type="button"
+                    >
+                      ＋ 새 폴더 만들기
+                    </button>
+                    <div id="memberFolderList" class="member-stack"></div>
+                  </section>
+                  <section data-member-panel="collection">
+                    <div
+                      id="memberCollectionActions"
+                      class="member-collection-actions"
+                    ></div>
+                    <div class="member-filters">
+                      <input
+                        id="memberCollectionSearch"
+                        type="search"
+                        aria-label="목록에서 기법 검색"
+                        placeholder="저장한 기법 검색"
+                      /><select id="memberCollectionSort" aria-label="목록 정렬">
+                        <option value="recent">최근 저장순</option>
+                        <option value="name">이름순</option>
+                      </select>
+                    </div>
+                    <div id="memberCollectionList"></div>
+                  </section>
+                  <section data-member-panel="accessibility">
+                    <div class="member-info-card">
+                      <label class="accessibility-control"
+                        ><span>글자 크기</span
+                        ><select data-a11y="textSize" aria-label="글자 크기">
+                          <option value="normal">기본</option>
+                          <option value="large">크게</option>
+                          <option value="xlarge">매우 크게</option>
+                        </select></label
+                      ><label class="accessibility-control"
+                        ><span
+                          >고대비 모드<small
+                            >텍스트·버튼·입력창·테두리의 구별을 강화합니다.</small
+                          ></span
+                        ><input type="checkbox" data-a11y="contrast" /></label
+                      ><label class="accessibility-control"
+                        ><span
+                          >움직임 줄이기<small
+                            >장식 애니메이션과 배경 영상 자동 재생을 줄입니다. 기기 설정은
+                            항상 존중합니다.</small
+                          ></span
+                        ><input type="checkbox" data-a11y="motion" /></label
+                      ><label class="accessibility-control"
+                        ><span>링크 밑줄 표시</span
+                        ><input type="checkbox" data-a11y="links" /></label
+                      ><label class="accessibility-control"
+                        ><span
+                          >영상 자막 우선 표시<small
+                            >실제 자막 트랙이 있는 영상에만 적용합니다. 자막을 새로
+                            생성하지 않습니다.</small
+                          ></span
+                        ><input type="checkbox" data-a11y="captions"
+                      /></label>
+                    </div>
+                    <p id="accessibilityStatus" role="status" aria-live="polite"></p>
+                  </section>
+                  <section data-member-panel="settings">
+                    <h3>화면 및 언어</h3>
+                    <div class="member-info-card">
+                      <div class="member-setting-row theme-setting">
+                        <span data-member-icon="screen"></span>
+                        <div>
+                          <h3>화면 모드</h3>
+                          <p>계정별 저장 · 시스템 모드는 기기 설정을 따릅니다.</p>
+                        </div>
+                        <select data-theme-control aria-label="화면 모드">
+                          <option value="dark">다크</option>
+                          <option value="light">라이트</option>
+                          <option value="system">시스템 설정</option>
+                        </select>
+                      </div>
+                      <div class="member-setting-row">
+                        <span data-member-icon="language"></span>
+                        <div>
+                          <h3>언어</h3>
+                          <p>
+                            한국어<span class="member-language-note"
+                              >다국어 지원 예정</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <p id="themeStatus" role="status" aria-live="polite"></p>
+                  </section>
+                  <p id="memberLibraryStatus" role="status" aria-live="polite"></p>
+                  <button
+                    id="retryMemberLibrary"
+                    class="member-action"
+                    type="button"
+                    hidden
+                  >
+                    다시 불러오기
+                  </button>
+                </div>
+              </div>
+            </div>
+            <dialog
+              id="memberLibraryDialog"
+              class="member-library-dialog"
+              aria-labelledby="memberLibraryDialogTitle"
+            >
+              <form id="memberLibraryForm">
+                <h2 id="memberLibraryDialogTitle"></h2>
+                <label id="memberLibraryNameLabel"
+                  >이름<input
+                    id="memberLibraryName"
+                    maxlength="60"
+                    autocomplete="off"
+                    required
+                /></label>
+                <div id="memberLibraryChoices"></div>
+                <p id="memberLibraryDialogStatus" role="status"></p>
+                <div class="member-dialog-actions">
+                  <button id="cancelMemberLibrary" class="member-action" type="button">
+                    취소</button
+                  ><button
+                    id="saveMemberLibrary"
+                    class="member-action member-primary"
+                    type="submit"
+                  >
+                    저장
+                  </button>
+                </div>
+              </form>
+            </dialog>
+          </section>
+          <footer
+            class="service-footer"
+            data-service-footer
+            aria-label="CINELIQ 서비스 정보"
+          ></footer>
+        </main>
+      </div>
+    </div>
+    <div
+      id="detailModal"
+      class="modal-layer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="detailTitle"
+      hidden
+    >
+      <div class="modal-scrim" data-close="true"></div>
+      <section class="detail-panel">
+        <button id="closeDetail" class="modal-close" type="button" aria-label="닫기">
+          ×
+        </button>
+        <div id="detailBody"></div>
+      </section>
+      <nav class="detail-navigation" aria-label="기법 이전·다음 탐색">
+        <button
+          id="detailPrevious"
+          class="detail-step"
+          type="button"
+          aria-label="이전 기법"
+          disabled
+        >
+          ←</button
+        ><output id="detailPosition" role="status" aria-live="polite"></output
+        ><button
+          id="detailNext"
+          class="detail-step"
+          type="button"
+          aria-label="다음 기법"
+          disabled
+        >
+          →
+        </button>
+      </nav>
+    </div>
+    <dialog
+      id="memberDialog"
+      class="admin-dialog member-dialog"
+      aria-labelledby="memberAuthTitle"
+    >
+      <div class="admin-dialog-head">
+        <h2 id="memberAuthTitle">로그인</h2>
+        <button id="closeMemberAuth" class="member-action" type="button">닫기</button>
+      </div>
+      <button
+        id="memberGoogle"
+        class="member-action member-social"
+        type="button"
+        disabled
+      >
+        <span class="member-social-content"
+          ><img
+            class="member-social-logo"
+            src="assets/google-signin-g.png"
+            width="20"
+            height="20"
+            alt=""
+          /><span>Google 계정으로 계속하기</span></span
+        >
+      </button>
+      <button id="memberKakao" class="member-action member-social" type="button" disabled>
+        <span class="member-social-content"
+          ><img
+            class="member-social-logo"
+            src="assets/kakao-signin-symbol.svg"
+            width="20"
+            height="20"
+            alt=""
+          /><span>카카오 로그인</span></span
+        >
+      </button>
+      <form id="memberForm">
+        <p class="member-email-divider">또는 이메일로 로그인</p>
+        <label
+          >이메일<input name="email" type="email" autocomplete="username" required
+        /></label>
+        <label
+          >비밀번호<input
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+        /></label>
+        <button id="memberSubmit" class="member-action" type="submit" disabled>
+          로그인
+        </button>
+      </form>
+      <div class="member-auth-links">
+        <button type="button" data-auth-mode="login" hidden>로그인</button
+        ><button type="button" data-auth-mode="signup">회원가입</button
+        ><button type="button" data-auth-mode="reset">비밀번호 찾기</button>
+      </div>
+      <p id="memberAuthStatus" role="status" aria-live="polite"></p>
+      <nav class="policy-links" aria-label="회원 서비스 정책">
+        <a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>
+        <a href="terms.html" target="_blank" rel="noopener">서비스 이용약관</a>
+      </nav>
+    </dialog>
+    <dialog id="adminDialog" class="admin-dialog" aria-labelledby="adminTitle">
+      <div class="admin-dialog-head">
+        <h2 id="adminTitle">관리자 미디어 관리</h2>
+        <button id="closeAdmin" class="btn outline small" type="button">닫기</button>
+      </div>
+      <form id="adminLogin">
+        <label
+          >이메일<input name="email" type="email" autocomplete="username" required
+        /></label>
+        <label
+          >비밀번호<input
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+        /></label>
+        <button class="btn dark" type="submit">로그인</button>
+        <p id="loginStatus" role="status"></p>
+      </form>
+      <div id="adminSession" hidden>
+        <p>기법 상세에서 공개 미디어를 등록하고 관리할 수 있습니다.</p>
+        <section id="legacyImport"></section>
+        <button id="adminLogout" class="btn outline" type="button">로그아웃</button>
+      </div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

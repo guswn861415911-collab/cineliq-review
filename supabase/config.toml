@@ -1,0 +1,5 @@
+[functions.delete-account]
+verify_jwt = false
+
+[functions.account-merge-test]
+verify_jwt = false
